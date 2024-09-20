@@ -1,0 +1,723 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+
+    <link rel="apple-touch-icon" type="image/png"
+        href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+
+    <link rel="mask-icon" type="image/x-icon"
+        href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg"
+        color="#111">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
+
+
+    <title>CodePen - Bootstrap Login Page</title>
+
+    <link rel="canonical" href="https://codepen.io/emreberber/pen/oeREoZ">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Panel Log in</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+    <style>
+        body {
+            background: #222D32;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .login-box {
+            /* margin-top: 75px; */
+            height: auto;
+            background: #1A2226;
+            text-align: center;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        }
+
+        .login-key {
+            height: 100px;
+            font-size: 80px;
+            line-height: 100px;
+            background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .login-title {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 30px;
+            letter-spacing: 2px;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ECF0F5;
+        }
+
+        .login-form {
+            margin-top: 25px;
+            text-align: left;
+        }
+
+        input[type=text] {
+            background-color: #1A2226;
+            border: none;
+            border-bottom: 2px solid #0DB8DE;
+            border-top: 0px;
+            border-radius: 0px;
+            font-weight: bold;
+            outline: 0;
+            margin-bottom: 20px;
+            padding-left: 0px;
+            color: #ECF0F5;
+        }
+
+        input[type=password] {
+            background-color: #1A2226;
+            border: none;
+            border-bottom: 2px solid #0DB8DE;
+            border-top: 0px;
+            border-radius: 0px;
+            font-weight: bold;
+            outline: 0;
+            padding-left: 0px;
+            margin-bottom: 20px;
+            color: #ECF0F5;
+        }
+
+        .form-group {
+            margin-bottom: 40px;
+            outline: 0px;
+        }
+
+        .form-control:focus {
+            border-color: inherit;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            border-bottom: 2px solid #0DB8DE;
+            outline: 0;
+            background-color: #1A2226;
+            color: #ECF0F5;
+        }
+
+        input:focus {
+            outline: none;
+            box-shadow: 0 0 0;
+        }
+
+        label {
+            margin-bottom: 0px;
+        }
+
+        .form-control-label {
+            font-size: 10px;
+            color: #6C6C6C;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .btn-outline-primary {
+            border-color: #0DB8DE;
+            color: #0DB8DE;
+            border-radius: 0px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #0DB8DE;
+            right: 0px;
+        }
+
+        .login-btm {
+            float: left;
+        }
+
+        .login-button {
+            padding-right: 0px;
+            text-align: right;
+            margin-bottom: 25px;
+        }
+
+        .login-text {
+            text-align: left;
+            padding-left: 0px;
+            color: #A2A4A4;
+        }
+
+        .loginbttm {
+            padding: 0px;
+        }
+
+        .dashboard-wrapper {
+            margin: 20px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-custom {
+            width: 40%;
+            margin: 10px auto;
+            padding: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            display: block;
+        }
+
+        .btn-question1 {
+            background-color: #007bff;
+        }
+
+        .btn-question2 {
+            background-color: #28a745;
+        }
+
+        .btn-question3 {
+            background-color: #dc3545;
+        }
+
+        .form-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .form-control-custom {
+            border-radius: 8px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+            border: 1px solid #ced4da;
+            margin-bottom: 15px;
+        }
+
+        .form-control-large {
+            height: 60px;
+            font-size: 16px;
+        }
+
+        .btn-save-custom {
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            padding: 10px 20px;
+            display: block;
+            width: 100%;
+        }
+
+        .btn-save-custom:hover {
+            background-color: #0056b3;
+        }
+
+        .option-wrapper {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .option-wrapper input[type="text"] {
+            margin-left: 10px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        @media (max-width: 768px) {
+            .btn-custom {
+                width: 80%;
+            }
+        }
+
+        .dashboard {
+            display: none;
+        }
+    </style>
+
+    <script>
+        window.console = window.console || function (t) { };
+    </script>
+
+
+
+</head>
+
+<body translate="no">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box   step1">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    ADMIN PANEL
+                </div>
+
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form id="staffLoginForm">
+                            <div class="form-group">
+                                <label class="form-control-label">Staff ID</label>
+                                <input type="text" id="staffId" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">PASSWORD</label>
+                                <input type="password" id="password" class="form-control" i="">
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                    <!-- Error Message -->
+                                    <div id="responseMessage"></div>
+
+                                </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+    <div class="dashboard step2">
+
+        <div class="dashboard-wrapper text-center">
+            <h2>Dashboard</h2>
+
+            <button class="btn-custom btn-question1" onclick="showForm('question1')">Question 1</button>
+            <button class="btn-custom btn-question2" onclick="showForm('question2')">Question 2</button>
+            <button class="btn-custom btn-question3" onclick="showForm('question3')">Question 3</button>
+            <button class="btn-custom btn-Result" onclick="showForm('Result')">Result</button>
+
+
+
+
+
+
+
+            <!-- Form for Question 1 -->
+            <div id="question1" class="form-section">
+                <h4>Question 1</h4>
+                <input type="text" id="q1-text" class="form-control form-control-custom form-control-large" placeholder="Enter Question 1">
+                <div class="option-wrapper">
+                    <label>1-1</label>
+                    <input type="text" id="q1-opt1" class="form-control form-control-custom" placeholder="Option 1">
+                </div>
+                <div class="option-wrapper">
+                    <label>1-2</label>
+                    <input type="text" id="q1-opt2" class="form-control form-control-custom" placeholder="Option 2">
+                </div>
+                <div class="option-wrapper">
+                    <label>1-3</label>
+                    <input type="text" id="q1-opt3" class="form-control form-control-custom" placeholder="Option 3">
+                </div>
+                <div class="option-wrapper">
+                    <label>1-4</label>
+                    <input type="text" id="q1-opt4" class="form-control form-control-custom" placeholder="Option 4">
+                </div>
+                <input type="text" id="q1-correct" class="form-control form-control-custom form-control-large" placeholder="Correct Answer">
+                <button class="btn-save-custom sub1" onclick="saveQuestion1()">Save</button>
+            </div>
+        
+            <div id="question2" class="form-section">
+                <h4>Question 2</h4>
+                <input type="text" id="q2-text" class="form-control form-control-custom form-control-large" placeholder="Enter Question 2">
+                <div class="option-wrapper">
+                    <label>2-1</label>
+                    <input type="text" id="q2-opt1" class="form-control form-control-custom" placeholder="Option 1">
+                </div>
+                <div class="option-wrapper">
+                    <label>2-2</label>
+                    <input type="text" id="q2-opt2" class="form-control form-control-custom" placeholder="Option 2">
+                </div>
+                <div class="option-wrapper">
+                    <label>2-3</label>
+                    <input type="text" id="q2-opt3" class="form-control form-control-custom" placeholder="Option 3">
+                </div>
+                <div class="option-wrapper">
+                    <label>2-4</label>
+                    <input type="text" id="q2-opt4" class="form-control form-control-custom" placeholder="Option 4">
+                </div>
+                <input type="text" id="q2-correct" class="form-control form-control-custom form-control-large" placeholder="Correct Answer">
+                <button type="button" onclick="saveQuestion2()">Save</button>
+            </div>
+        
+            <div id="question3" class="form-section">
+                <h4>Question 3</h4>
+                <input type="text" id="q3-text" class="form-control form-control-custom form-control-large" placeholder="Enter Question 3">
+                <div class="option-wrapper">
+                    <label>3-1</label>
+                    <input type="text" id="q3-opt1" class="form-control form-control-custom" placeholder="Option 1">
+                </div>
+                <div class="option-wrapper">
+                    <label>3-2</label>
+                    <input type="text" id="q3-opt2" class="form-control form-control-custom" placeholder="Option 2">
+                </div>
+                <div class="option-wrapper">
+                    <label>3-3</label>
+                    <input type="text" id="q3-opt3" class="form-control form-control-custom" placeholder="Option 3">
+                </div>
+                <div class="option-wrapper">
+                    <label>3-4</label>
+                    <input type="text" id="q3-opt4" class="form-control form-control-custom" placeholder="Option 4">
+                </div>
+                <input type="text" id="q3-correct" class="form-control form-control-custom form-control-large" placeholder="Correct Answer">
+                <button class="btn-save-custom sub3" onclick="saveQuestion3()">Save</button>
+            </div>
+        
+
+
+        </div>
+    </div>
+    <script>
+        function saveChanges() {
+            const status = document.getElementById('status');
+            status.innerHTML = `
+                <p class="alert alert-success">Changes saved successfully!</p>
+                <button class="btn btn-custom" onclick="commitChanges()">Commit Changes</button>
+            `;
+        }
+
+        function commitChanges() {
+            alert('Changes committed!');
+        }
+
+
+        function showForm(questionId) {
+            // Hide all forms
+            const forms = document.querySelectorAll('.form-section');
+            forms.forEach(form => form.style.display = 'none');
+
+            // Show the selected form
+            document.getElementById(questionId).style.display = 'block';
+        }
+
+
+
+
+
+        document.getElementById('staffLoginForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            const staffId = document.getElementById('staffId').value;
+            const password = document.getElementById('password').value;
+
+            fetch('/staff-login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ staffId, password }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const responseMessage = document.getElementById('responseMessage');
+                    if (data.success) {
+                        // Success message
+                        responseMessage.innerHTML = `<p class="alert alert-success">Login successful!</p>`;
+                        // Hide the login box and show the dashboard
+                        document.querySelector('.step1').style.display = 'none';
+                        document.querySelector('.step2').style.display = 'block';
+                    } else {
+                        // Error message
+                        responseMessage.innerHTML = `<p class="alert alert-danger">Invalid Staff ID or Password. Please try again.</p>`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    const responseMessage = document.getElementById('responseMessage');
+                    responseMessage.innerHTML = `<p class="alert alert-danger">An error occurred. Please try again later.</p>`;
+                });
+        });
+        function showForm(questionId) {
+            const forms = document.querySelectorAll('.form-section');
+            forms.forEach(form => form.style.display = 'none');
+            document.getElementById(questionId).style.display = 'block';
+        }
+
+
+
+        // ====================================================================check data-=======================================================================
+
+        // ======================================question1====================================================================
+
+        // function saveQuestion(questionNumber) {
+        //     const questionText = document.getElementById(`q${questionNumber}-text`).value;
+        //     const option1 = document.getElementById(`q${questionNumber}-opt1`).value;
+        //     const option2 = document.getElementById(`q${questionNumber}-opt2`).value;
+        //     const option3 = document.getElementById(`q${questionNumber}-opt3`).value;
+        //     const option4 = document.getElementById(`q${questionNumber}-opt4`).value;
+        //     const correctAnswer = document.getElementById(`q${questionNumber}-correct`).value;
+
+        //     const options = [option1, option2, option3, option4];
+
+        //     // Check if the correct answer matches any option
+        //     if (options.includes(correctAnswer)) {
+        //         // Log the data to the console
+        //         console.log("Question Text:", questionText);
+        //         console.log("Options:", options);
+        //         console.log("Correct Answer:", correctAnswer);
+        //         console.log("Correct answer matches one of the options.");
+
+        //         const questionData = {
+        //             question: questionText,
+        //             options: options,
+        //             correctAnswer: correctAnswer
+        //         };
+
+        //         // Log the question data
+        //         console.log("Question Data:", questionData);
+
+        //         // Optional: Save the data (to localStorage or any other method)
+        //         localStorage.setItem(`question_${questionNumber}`, JSON.stringify(questionData));
+
+        //         alert("Question saved successfully!");
+        //     } else {
+        //         alert("Correct answer does not match any option. Cannot save.");
+        //     }
+
+
+        // ===================================================================question2======================================================================
+
+        // function saveQuestion2() {
+        //     const questionText = document.getElementById('q2-text').value;
+        //     const option1 = document.getElementById('q2-opt1').value;
+        //     const option2 = document.getElementById('q2-opt2').value;
+        //     const option3 = document.getElementById('q2-opt3').value;
+        //     const option4 = document.getElementById('q2-opt4').value;
+        //     const correctAnswer = document.getElementById('q2-correct').value;
+
+        //     const options = [option1, option2, option3, option4];
+
+        //     // Check if the correct answer matches any option
+        //     if (options.includes(correctAnswer)) {
+        //         // Log the data to the console
+        //         console.log("Question Text:", questionText);
+        //         console.log("Options:", options);
+        //         console.log("Correct Answer:", correctAnswer);
+        //         console.log("Correct answer matches one of the options.");
+
+        //         const questionData = {
+        //             question: questionText,
+        //             options: options,
+        //             correctAnswer: correctAnswer
+        //         };
+
+        //         // Log the question data
+        //         console.log("Question Data:", questionData);
+
+        //         // Optional: Save the data (to localStorage or any other method)
+        //         localStorage.setItem('question_2', JSON.stringify(questionData));
+
+        //         alert("Question saved successfully!");
+        //     } else {
+        //         alert("Correct answer does not match any option. Cannot save.");
+        //     }
+        // }
+
+
+
+        // ==============================================================question3=====================================================================
+
+        // function saveQuestion3() {
+        //     const questionText = document.getElementById('q3-text').value;
+        //     const option1 = document.getElementById('q3-opt1').value;
+        //     const option2 = document.getElementById('q3-opt2').value;
+        //     const option3 = document.getElementById('q3-opt3').value;
+        //     const option4 = document.getElementById('q3-opt4').value;
+        //     const correctAnswer = document.getElementById('q3-correct').value;
+
+        //     const options = [option1, option2, option3, option4];
+
+        //     // Check if the correct answer matches any option
+        //     if (options.includes(correctAnswer)) {
+        //         // Log the data to the console
+        //         console.log("Question Text:", questionText);
+        //         console.log("Options:", options);
+        //         console.log("Correct Answer:", correctAnswer);
+        //         console.log("Correct answer matches one of the options.");
+
+        //         const questionData = {
+        //             question: questionText,
+        //             options: options,
+        //             correctAnswer: correctAnswer
+        //         };
+
+        //         // Log the question data
+        //         console.log("Question Data:", questionData);
+
+        //         // Save the data to localStorage (optional)
+        //         localStorage.setItem('question_3', JSON.stringify(questionData));
+
+        //         alert("Question saved successfully!");
+        //     } else {
+        //         alert("Correct answer does not match any option. Cannot save.");
+        //     }
+        // }
+
+
+
+
+        function saveQuestion1() {
+    const questionText = document.getElementById('q1-text').value;
+    const option1 = document.getElementById('q1-opt1').value;
+    const option2 = document.getElementById('q1-opt2').value;
+    const option3 = document.getElementById('q1-opt3').value;
+    const option4 = document.getElementById('q1-opt4').value;
+    const correctAnswer = document.getElementById('q1-correct').value;
+
+    const options = [option1, option2, option3, option4];
+
+    if (options.includes(correctAnswer)) {
+        const questionData = {
+            question: questionText,
+            options: options,
+            correctAnswer: correctAnswer
+        };
+
+        fetch('/api/question-one', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(questionData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Question 1 saved successfully!");
+            } else {
+                alert("Error saving question 1.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred while saving the question.");
+        });
+    } else {
+        alert("Correct answer does not match any option. Cannot save.");
+    }
+}
+
+function saveQuestion2() {
+    const questionText = document.getElementById('q2-text').value;
+    const option1 = document.getElementById('q2-opt1').value;
+    const option2 = document.getElementById('q2-opt2').value;
+    const option3 = document.getElementById('q2-opt3').value;
+    const option4 = document.getElementById('q2-opt4').value;
+    const correctAnswer = document.getElementById('q2-correct').value;
+
+    const options = [option1, option2, option3, option4];
+
+    if (options.includes(correctAnswer)) {
+        const questionData = {
+            question: questionText,
+            options: options,
+            correctAnswer: correctAnswer
+        };
+
+        fetch('/api/question-two', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(questionData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Question 2 saved successfully!");
+            } else {
+                alert("Error saving question 2.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred while saving the question.");
+        });
+    } else {
+        alert("Correct answer does not match any option. Cannot save.");
+    }
+}
+
+function saveQuestion3() {
+    const questionText = document.getElementById('q3-text').value;
+    const option1 = document.getElementById('q3-opt1').value;
+    const option2 = document.getElementById('q3-opt2').value;
+    const option3 = document.getElementById('q3-opt3').value;
+    const option4 = document.getElementById('q3-opt4').value;
+    const correctAnswer = document.getElementById('q3-correct').value;
+
+    const options = [option1, option2, option3, option4];
+
+    if (options.includes(correctAnswer)) {
+        const questionData = {
+            question: questionText,
+            options: options,
+            correctAnswer: correctAnswer
+        };
+
+        fetch('/api/question-three', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(questionData)
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Question 3 saved successfully!");
+            } else {
+                alert("Error saving question 3.");
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert("An error occurred while saving the question.");
+        });
+    } else {
+        alert("Correct answer does not match any option. Cannot save.");
+    }
+}
+
+    </script>
+</body>
+
+</html>
